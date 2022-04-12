@@ -113,8 +113,22 @@ copyrightInformationLink.textContent = siteContent.footer.copyright;
 /* ***** */
 /* ***** */
 
-const headerLogoImg = document.querySelector('header img');
-
+const headerLogoImg = document.querySelector('header > img');
 headerLogoImg.src = siteContent.images["logo-img"];
+
+const callToActionImg = document.querySelector('.cta > img');
+callToActionImg.src = siteContent.images["cta-img"];
+
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent.images['accent-img'];
+
+/* ***** */
+/* ***** */
+/* ***** */
+
+navLinks.forEach(x => x.classList.add('italic'));
+
+const footerLink = document.querySelector('footer > a');
+footerLink.classList.add('bold');
 
 console.log('project wired!')
