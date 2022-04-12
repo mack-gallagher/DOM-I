@@ -109,4 +109,12 @@ const copyrightInformationLink = document.querySelector('footer a');
 
 copyrightInformationLink.textContent = siteContent.footer.copyright;
 
+/* ***** */
+/* ***** */
+/* ***** */
+
+const headerLogoImg = document.querySelector('header img');
+
+headerLogoImg.src = siteContent.images["logo-img"];
+
 console.log('project wired!')
