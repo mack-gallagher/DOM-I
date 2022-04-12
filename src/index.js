@@ -39,4 +39,74 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+
+const navLinks = document.querySelectorAll("header nav a");
+const navLinksContents = Object.keys(siteContent["nav"]);
+
+let i = 0;
+while (i < navLinks.length) {
+  navLinks[i].textContent = siteContent["nav"][navLinksContents[i]];
+  i++;
+}
+
+/* ***** */
+/* ***** */
+/* ***** */
+
+const callToActionElements = document.querySelectorAll(".cta-text > *");
+const callToActionContents = Object.keys(siteContent["cta"]);
+
+i = 0;
+while (i < callToActionElements.length) {
+  callToActionElements[i].textContent = siteContent["cta"][callToActionContents[i]];
+  i++;
+}
+
+/* ***** */
+/* ***** */
+/* ***** */
+
+const mainContentHeadings = document.querySelectorAll('.main-content > div > .text-content > h4');
+const mainContentHeadingsContents = Object.keys(siteContent["main-content"]).filter(x => x.includes("h4"));
+
+i = 0;
+while (i < mainContentHeadings.length) {
+  mainContentHeadings[i].textContent = siteContent["main-content"][mainContentHeadingsContents[i]];
+  i++;
+}
+
+/* ***** */
+/* ***** */
+/* ***** */
+
+const mainContentParagraphs = document.querySelectorAll('.main-content > div > .text-content > p');
+const mainContentParagraphsContents = Object.keys(siteContent['main-content']).filter(x => x.includes("content"));
+
+i = 0;
+while (i < mainContentParagraphs.length) {
+  mainContentParagraphs[i].textContent = siteContent['main-content'][mainContentParagraphsContents[i]];
+  i++;
+}
+
+/* ***** */
+/* ***** */
+/* ***** */
+
+const contactInformationElements = document.querySelectorAll('.contact > *');
+const contactInformationContents = Object.keys(siteContent['contact']);
+
+i = 0;
+while (i < contactInformationElements.length) {
+  contactInformationElements[i].textContent = siteContent['contact'][contactInformationContents[i]];
+  i++;
+}
+
+/* ***** */
+/* ***** */
+/* ***** */
+
+const copyrightInformationLink = document.querySelector('footer a');
+
+copyrightInformationLink.textContent = siteContent.footer.copyright;
+
 console.log('project wired!')
